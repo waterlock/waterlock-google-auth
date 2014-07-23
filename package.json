@@ -1,0 +1,38 @@
+{
+  "name": "waterlock-google-auth",
+  "version": "0.0.1",
+  "description": "google authentication for waterlock",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidrivera/waterlock-google-auth"
+  },
+  "keywords": [
+    "google",
+    "oauth2",
+    "authentication",
+    "waterlock",
+    "sails"
+  ],
+  "dependencies" : {
+    "request": "*",
+    "lodash": "*"
+  }, 
+  "devDependencies":{
+    "mocha": "*",
+    "should": "*",
+    "proxyquire": "*",
+    "coveralls": "*",
+    "istanbul": "*",
+    "jshint": "*"
+  },
+  "author": "David Rivera <david.r.rivera193@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidrivera/waterlock-google-auth/issues"
+  },
+  "homepage": "https://github.com/davidrivera/waterlock-google-auth"
+}
