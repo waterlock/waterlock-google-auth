@@ -1,7 +1,7 @@
 var proxyquire = require('proxyquire');
 var should = require('should');
 var mocha = require('mocha');
-var config = require('./waterlock.config');
+var config = require('../fixtures/waterlock.config');
 
 var WaterlockGoogleAuth = proxyquire.noCallThru().load('../../lib/waterlock-google-auth',{
   './waterlock-config': function(){},
