@@ -23,4 +23,4 @@ set the following option in your `waterlock.json` config file
 ]
 ```
 
-Direct your user to `/auth/login` will initiate the oauth request. The callback uri is `/auth/oauth2` if successfuly authenticated a user record will be created if a user is not found one will be created using the [waterlines](https://github.com/balderdashy/waterline) `findOrCreate` method
+Direct your user to `/auth/login` to initiate the oauth request. The callback uri is `/auth/google_oauth2` if successfuly authenticated a user record will be created if a user is not found one will be created using the [waterlines](https://github.com/balderdashy/waterline) `findOrCreate` method
