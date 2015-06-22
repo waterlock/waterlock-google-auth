@@ -17,8 +17,9 @@ set the following option in your `waterlock.json` config file
 "authMethod":[
    {
       name: 'waterlock-google-auth',
-      clientId: 'CLIENT_ID', 
-      clientSecret: 'CLIENT_SECRET'
+      clientId: 'CLIENT_ID',
+      clientSecret: 'CLIENT_SECRET',
+      allow: ['DOMAIN', 'USER@DOMAIN']
     }
 ]
 ```
