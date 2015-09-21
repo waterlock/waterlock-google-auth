@@ -11,7 +11,8 @@ providing a google authentication method for users.
 npm install waterlock-google-auth
 ```
 
-set the following option in your `waterlock.json` config file
+set the following option in your `waterlock.json` config file. Allow is an optional
+filter - if you omit it, all domains will be allowed.
 
 ```js
 "authMethod":[
