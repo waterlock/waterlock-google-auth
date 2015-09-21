@@ -8,13 +8,6 @@
  * http://waterlock.ninja/documentation
  */
 module.exports.waterlock = {
-  
-  // Base URL
-  // 
-  // used by auth methods for callback URI's using oauth and for password
-  // reset links.
-  baseUrl: 'http://localhost:1337',
-  
   // Auth Method(s) 
   // 
   // this can be a single string, an object, or an array of objects for your 
@@ -23,27 +16,9 @@ module.exports.waterlock = {
   // of the local authentication method with password reset tokens disabled.
   authMethod: [
     {
-      name:'waterlock-local-auth',
-      passwordReset:{
-        tokens: false,
-        mail: {
-          protocol: 'SMTP',
-          options:{
-            service: 'Gmail',
-            auth: {
-              user: 'gmail.user@gmail.com',
-              pass: 'userpass'
-            }
-          },
-          from: 'no-reply@domain.com',
-          subject: 'Your password reset!',
-          forwardUrl: 'http://localhost:1337'
-        },  
-        template:{
-          file: '../views/email.jade',
-          vars:{}
-        }
-      }
+      name: 'waterlock-google-auth',
+      clientId: 'CLIENT_ID',
+      clientSecret: 'CLIENT_SECRET'
     }
   ],
 
