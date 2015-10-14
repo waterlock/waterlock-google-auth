@@ -60,7 +60,7 @@ authMethod: [
       allow: ['DOMAIN', 'USER@DOMAIN'],
       redirectUri: 'redirectUri'
 		fieldMap: {
-			// <model-field>: <facebook-field>,
+			// <model-field>: <google-field>,
 			'firstName': 'given_name',
 			'lastName': 'family_name',
 			'gender': 'gender'
