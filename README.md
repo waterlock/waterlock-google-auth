@@ -31,3 +31,40 @@ filter - if you omit it, all domains will be allowed.
 ```
 
 Direct your user to `/auth/login` to initiate the oauth request. The callback uri is `/auth/google_oauth2` if successfuly authenticated a user record will be created if a user is not found one will be created using the [waterlines](https://github.com/balderdashy/waterline) `findOrCreate` method
+
+### Grabbing Google field values
+
+By default, waterlock-google-auth stores the user's `googleEmail` in the Auth model. By providing waterlock with some field maps you can hydrate the user object with extended information. The cost of this is a second call to [google's /me api](https://developers.google.com/+/web/api/rest/openidconnect/getOpenIdConnect)
+To grab and store this, you will need to modify the attribute fields in your `Auth.js` model...
+
+```js
+// api/models/Auth.js
+module.exports = {
+	attributes: require('waterlock').models.auth.attributes({
+		firstName: 'string',
+		lastName: 'string',
+		gender: 'string',
+		timezone: 'number'
+	})
+}
+```
+
+...and then add a `fieldMap` object within the facebook authMethod in your `waterlock.js` config file which matches your model's fields to facebook's fields.
+
+```js
+authMethod: [
+	{
+		name: 'waterlock-google-auth',
+      clientId: 'CLIENT_ID',
+      clientSecret: 'CLIENT_SECRET',
+      allow: ['DOMAIN', 'USER@DOMAIN'],
+      redirectUri: 'redirectUri'
+		fieldMap: {
+			// <model-field>: <facebook-field>,
+			'firstName': 'given_name',
+			'lastName': 'family_name',
+			'gender': 'gender'
+		}
+	}
+]
+```
