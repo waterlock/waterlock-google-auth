@@ -49,7 +49,7 @@ module.exports = {
 }
 ```
 
-...and then add a `fieldMap` object within the facebook authMethod in your `waterlock.js` config file which matches your model's fields to facebook's fields.
+...and then add a `fieldMap` object within the google authMethod in your `waterlock.js` config file which matches your model's fields to google's fields.
 
 ```js
 authMethod: [
