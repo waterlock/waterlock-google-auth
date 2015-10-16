@@ -1,6 +1,6 @@
 # Waterlock Google Auth
 
-[![Build Status](http://img.shields.io/travis/davidrivera/waterlock-google-auth.svg?style=flat)](https://travis-ci.org/davidrivera/waterlock-google-auth) [![NPM version](http://img.shields.io/npm/v/waterlock-google-auth.svg?style=flat)](http://badge.fury.io/js/waterlock-google-auth) [![Dependency Status](http://img.shields.io/gemnasium/davidrivera/waterlock-google-auth.svg?style=flat)](https://gemnasium.com/davidrivera/waterlock-google-auth)
+[![Build Status](http://img.shields.io/travis/waterlock/waterlock-google-auth.svg?style=flat)](https://travis-ci.org/waterlock/waterlock-google-auth) [![NPM version](http://img.shields.io/npm/v/waterlock-google-auth.svg?style=flat)](http://badge.fury.io/js/waterlock-google-auth) [![Dependency Status](http://img.shields.io/gemnasium/davidrivera/waterlock-google-auth.svg?style=flat)](https://gemnasium.com/davidrivera/waterlock-google-auth)
 
 waterlock-google-auth is a module for [waterlock](https://github.com/davidrivera/waterlock)
 providing a google authentication method for users.
